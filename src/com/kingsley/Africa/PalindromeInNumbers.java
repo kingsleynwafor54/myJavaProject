@@ -14,17 +14,17 @@ int sum=0;
         int temp = number;
 
         n = number / 1000;
-        m = (number /100)%10 ;
-        o = ((number /100) %10) %10;
-      int  p= (((number % 100) %100) %10)%10;
- sum=sum*10+p;
- sum=sum*10+o;
+        m = (number %1000)/100 ;
+        o = ((number %1000) %100) /10;
+        int  p= (((number % 100) %100) %10)%10;
+        sum=sum*10+p;
+        sum=sum*10+o;
         sum=sum*10+m;
         sum=sum*10+n;
        if (temp==sum) {
             System.out.println(sum+" is a Palindrome");
         }
-   else System.out.println("Not a palindrome");
+   else System.out.println("Not a palindrome"+p+""+o+" "+m+" "+n);
 
 
 

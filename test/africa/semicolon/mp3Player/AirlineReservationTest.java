@@ -5,6 +5,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
 public class AirlineReservationTest {
@@ -19,16 +20,38 @@ public class AirlineReservationTest {
     airline=null;
     }
 @Test
-    void AirlineShouldReserveSeat(){
-    boolean[] seatAssignment=new boolean[10];
+    void airlineCanAssignSeat(){
+    boolean[] arrays= new boolean[10];
 
-airline.firstClassSeats([]);
-assertEquals(5,airline.firstClassSeats();
+    assertEquals(AirlineReservation.classType.SEAT_RESERVED, airline.assignSeatInASection(1));
+    assertEquals(AirlineReservation.classType.SEAT_RESERVED, airline.assignSeatInASection(1));
+    assertEquals(AirlineReservation.classType.SEAT_RESERVED, airline.assignSeatInASection(1));
+    assertEquals(AirlineReservation.classType.SEAT_RESERVED, airline.assignSeatInASection(1));
+    assertEquals(AirlineReservation.classType.SEAT_RESERVED, airline.assignSeatInASection(1));
+    assertEquals(AirlineReservation.classType.FILLED_SEATS, airline.assignSeatInASection(1));
 
 }
 @Test
-    void airlineShouldAssignSeat(){
-    airline.getSeat()
-}
+    void airlineShouldBeAbleToReserveEconomySeats(){
+    assertEquals(AirlineReservation.classType.SEAT_RESERVED, airline.assignSeatInASection(2));
+    assertEquals(AirlineReservation.classType.SEAT_RESERVED, airline.assignSeatInASection(2));
+    assertEquals(AirlineReservation.classType.SEAT_RESERVED, airline.assignSeatInASection(2));
+    assertEquals(AirlineReservation.classType.SEAT_RESERVED, airline.assignSeatInASection(2));
+    assertEquals(AirlineReservation.classType.SEAT_RESERVED, airline.assignSeatInASection(2));
+    assertEquals(AirlineReservation.classType.FILLED_SEATS, airline.assignSeatInASection(2));
 
+}
+@Test
+    void airlineShouldAssignTicketToCustomers(){
+    airline.assignSeat(1);
+    assertEquals( "Seat No: " +  (1) + " First Class Seat",airline.getAirlineTicket());
+    airline.assignSeat(1);
+    assertEquals( "Seat No: " +  (2) + " First Class Seat",airline.getAirlineTicket());
+    airline.assignSeat(1);
+    assertEquals( "Seat No: " +  (3) + " First Class Seat",airline.getAirlineTicket());
+}
+@Test
+    void airlineShouldPrintOutMessage(){
+    assertEquals("Next flight leaves in 3 hours",airline.getSeatFullMessage());
+}
 }

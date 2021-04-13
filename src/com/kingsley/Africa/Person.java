@@ -1,8 +1,15 @@
-package africa.semicolon.mp3Player;
+
+package com.kingsley.Africa;
+
+
+
+import java.util.ArrayList;
 
 public class Person {
+
     private Name personName;
     private static int personCounter;
+    ArrayList<Person> person=new ArrayList<>();
 
 public Person (Name personName){
     this.personName=personName;
@@ -30,6 +37,11 @@ public Person (Name personName){
     return personCounter++;
     }
 
-
+public void autoGenerateConstructor(int constructor){
+    for (Person person1:
+        person) {
+        
+    }
+}
 
 }

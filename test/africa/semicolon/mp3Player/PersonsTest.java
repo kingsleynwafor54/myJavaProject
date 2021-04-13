@@ -1,6 +1,6 @@
 package africa.semicolon.mp3Player;
 
-import org.junit.jupiter.api.BeforeEach;
+import com.kingsley.Africa.Person;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -26,6 +26,7 @@ Person person =new Person ();
     Person person4 =new Person ();
     Person person5 =new Person ();
     Person person6 =new Person ();
-    assertEquals(6,person1.numberOfPersons ());
+    Person person7 =new Person ();
+    assertEquals(7,person1.numberOfPersons ());
 }
 }
