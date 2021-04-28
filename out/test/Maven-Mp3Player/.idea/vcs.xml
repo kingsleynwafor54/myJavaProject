@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/CodeSnare" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/CodeSnare/CodeSnare2" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/CodeSnare/CodeSnare2/src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Kata" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Mavin-Mp3" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/New Deitel" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/New Deitel/src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/New Deitel/src/Chapter5" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/New Deitel/src/TDD" vcs="Git" />
+  </component>
+</project>
